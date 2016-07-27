@@ -1,0 +1,25 @@
+{
+  "name": "simplemde-angular",
+  "homepage": "https://github.com/hansottowirtz/simple-mde-angular",
+  "authors": [
+    "Hans Otto Wirtz <hansottowirtz@gmail.com>"
+  ],
+  "description": "An AngularJS wrapper for SimpleMDE",
+  "main": "dist/simplemde-angular.js",
+  "keywords": [
+    "markdown",
+    "editor",
+    "angularjs",
+    "simplemde"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "*",
+    "!dist/*",
+    "!src/*"
+  ],
+  "dependencies": {
+    "simplemde": "^1.0.0",
+    "angular": "^1.3.0"
+  }
+}
