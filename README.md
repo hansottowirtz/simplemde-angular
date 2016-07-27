@@ -29,4 +29,7 @@ var app = angular.module('app', ['simplemde']);
 `git clone https://github.com/hansottowirtz/simplemde-angular.git`<br/>
 `cd simplemde-angular`<br/>
 `npm install`<br/>
+`bower install`<br/>
 `gulp build`
+
+You can use `bower link` to use your package locally.
