@@ -1,5 +1,7 @@
 # SimpleMDE for AngularJS
 
+A simple directive to bind SimpleMDE to `ng-model`. If you want support for something, please open an issue!
+
 ### Installation
 ```bash
 bower install simplemde-angular --save
