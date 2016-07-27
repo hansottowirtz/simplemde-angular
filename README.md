@@ -8,7 +8,7 @@ bower install simplemde-angular --save
 <script src="simplemde-angular/dist/simplemde-angular.js"></script>
 ```
 ```javascript
-app = angular.module('app', ['simplemde'])
+var app = angular.module('app', ['simplemde']);
 ```
 
 ### Usage

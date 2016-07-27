@@ -27,5 +27,4 @@ gulp.task('lint', function () {
   gulp.src('./src/*.coffee')
     .pipe(coffeelint())
     .pipe(coffeelint.reporter('coffeelint-stylish'))
-  setTimeout(done, 500)
 });
