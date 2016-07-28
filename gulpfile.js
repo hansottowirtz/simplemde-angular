@@ -7,7 +7,7 @@ var coffeelint = require('gulp-coffeelint');
 var size = require('gulp-size');
 var reporter = require('coffeelint-stylish').reporter;
 
-var files = ['./src/index.coffee']2
+var files = ['./src/index.coffee']
 
 gulp.task('default', ['build'])
 

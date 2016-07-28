@@ -6,9 +6,13 @@ A simple directive to bind SimpleMDE to `ng-model`. If you want support for some
 ```bash
 bower install simplemde-angular --save
 ```
+
 ```html
-<script src="simplemde-angular/dist/simplemde-angular.js"></script>
+<script src="bower_components/simplemde/dist/simplemde.min.js"></script>
+<script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/simplemde-angular/dist/simplemde-angular.js"></script>
 ```
+
 ```javascript
 var app = angular.module('app', ['simplemde']);
 ```
@@ -24,6 +28,19 @@ var app = angular.module('app', ['simplemde']);
 
 ```html
 <textarea simplemde ng-model='text'></textarea>
+```
+
+```javascript
+app.directive('custom-simplemde', [function(){
+  return {
+    restrict: 'A',
+    require: 'simplemde',
+    link: function(scope, element, attrs, simplemde) {
+      simplemde.get() // => SimpleMDE instance
+      simplemde.rerenderPreview()
+    }
+  }
+}]);
 ```
 
 ### Contributing
