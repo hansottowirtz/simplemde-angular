@@ -1,6 +1,6 @@
 {
   "name": "simplemde-angular",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An AngularJS wrapper for SimpleMDE",
   "main": "dist/simplemde-angular.js",
   "dependencies": {},

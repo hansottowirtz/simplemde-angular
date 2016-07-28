@@ -21,5 +21,6 @@
   "dependencies": {
     "simplemde": "^1.0.0",
     "angular": "^1.3.0"
-  }
+  },
+  "version": "0.0.2"
 }
