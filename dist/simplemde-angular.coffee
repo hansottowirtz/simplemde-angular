@@ -26,20 +26,20 @@ angular.module('simplemde', [])
         return
 
       ngModel.$render = ->
-        val = ngModel.$modelValue
+        val = ngModel.$modelValue || options.default
         mde.value(val)
         rerenderPreview(val) if mde.isPreviewActive()
         return
 
       # Controller exposing
       rerenderPreview = (val) ->
-        if mde.isPreviewActive()
-          val ||= mde.value()
-          preview = mde.codemirror.getWrapperElement().querySelector('.editor-preview')
-          preview.innerHTML = mde.options.previewRender(val, preview)
-          true
-        else
-          false
+        # if mde.isPreviewActive()
+        #   val ||= mde.value()
+        #   preview = mde.codemirror.getWrapperElement().querySelector('.editor-preview')
+        #   preview.innerHTML = mde.options.previewRender(val, preview)
+        #   true
+        # else
+        #   false
 
       scope.simplemde = {
         instance: mde,

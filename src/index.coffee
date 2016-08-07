@@ -26,7 +26,7 @@ angular.module('simplemde', [])
         return
 
       ngModel.$render = ->
-        val = ngModel.$modelValue
+        val = ngModel.$modelValue || options.default
         mde.value(val)
         rerenderPreview(val) if mde.isPreviewActive()
         return

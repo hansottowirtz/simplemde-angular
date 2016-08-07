@@ -29,23 +29,13 @@ angular.module('simplemde', []).directive('simplemde', [
         });
         ngModel.$render = function() {
           var val;
-          val = ngModel.$modelValue;
+          val = ngModel.$modelValue || options["default"];
           mde.value(val);
           if (mde.isPreviewActive()) {
             rerenderPreview(val);
           }
         };
-        rerenderPreview = function(val) {
-          var preview;
-          if (mde.isPreviewActive()) {
-            val || (val = mde.value());
-            preview = mde.codemirror.getWrapperElement().querySelector('.editor-preview');
-            preview.innerHTML = mde.options.previewRender(val, preview);
-            return true;
-          } else {
-            return false;
-          }
-        };
+        rerenderPreview = function(val) {};
         scope.simplemde = {
           instance: mde,
           rerenderPreview: rerenderPreview
