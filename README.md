@@ -49,6 +49,7 @@ app.directive('custom-simplemde', [function(){
 `cd simplemde-angular`<br/>
 `npm install`<br/>
 `bower install`<br/>
+Make changes to `src/index.js`, then<br/>
 `gulp build`
 
 You can use `bower link` to use your package locally.
