@@ -1,7 +1,5 @@
 angular.module('simplemde', []).directive('simplemde', [
-  '$parse', '$timeout', function($parse, $timeout) {
-    var mde;
-    mde = null;
+  '$parse', function($parse) {
     return {
       restrict: 'A',
       require: 'ngModel',
@@ -21,15 +19,14 @@ angular.module('simplemde', []).directive('simplemde', [
         var options, rerenderPreview;
         options = $parse(attrs.simplemde)(scope) || {};
         options.element = element[0];
-        mde = new SimpleMDE(options);
+        var mde = new SimpleMDE(options);
         mde.codemirror.on('change', function() {
           scope.$applyAsync(function() {
             ngModel.$setViewValue(mde.value());
           });
         });
         ngModel.$render = function() {
-          var val;
-          val = ngModel.$modelValue || options["default"];
+          var val = ngModel.$modelValue || options["default"];
           mde.value(val);
           if (mde.isPreviewActive()) {
             rerenderPreview(val);
