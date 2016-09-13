@@ -1,5 +1,5 @@
 angular.module('simplemde', []).directive('simplemde', [
-  '$parse', '$timeout', function($parse, $timeout) {
+  '$parse', function($parse) {
     return {
       restrict: 'A',
       require: 'ngModel',
